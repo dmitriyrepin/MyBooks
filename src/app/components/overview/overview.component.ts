@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { Book, smapleBookData } from '../models/book';
+import { Book, smapleBookData } from '../../models/book';
 import { BookDetailsComponent } from '../book-details/book-details.component';
 import { MatTableModule } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
-import { BookListSelectionService } from '../services/book-list-selection.service';
+import { BookListSelectionService } from '../../services/book-list-selection.service';
 import { Observable, Subscription } from 'rxjs';
 
 @Component({

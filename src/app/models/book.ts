@@ -8,11 +8,22 @@ export interface Book {
 }
 
 export const EMPTY_BOOK: Book = {
-    coAuthors: [],
     author: '',
+    coAuthors: [],
     title: '',
     series: '',
+    bookNumber: undefined,
     narator: ''
+};
+
+
+export const SAMPLE_BOOK: Book = { 
+    author: "Brandon Sanderson", 
+    coAuthors: [], 
+    title: "The Well of Ascension", 
+    series: "Mistborn", 
+    bookNumber: 2, 
+    narator: "Michael Kramer" 
 };
 
 export const smapleBookData: Book[] = [

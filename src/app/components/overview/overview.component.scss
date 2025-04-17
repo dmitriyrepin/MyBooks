@@ -1,51 +1,30 @@
 .overview {
-    display: flex;
-    flex-direction: row;
-
-    height: 400px;
-    min-width: 800px;
+    display: grid;
+    grid: 400px / auto 400px;
 }
 
-.book-list-column {
+.book-list {
     background: lightblue;
+
+    .book-list-options {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 2px;
+    }
+
+    .book-list-items {
+        height: 100%;
+        overflow: auto;
+
+        background-color: magenta;
+        border: 1px solid black;
+    }
 }
 
-.details-column {
+.details {
     // background: pink;
     min-width: 200px;
-}
-
-.book-list-options {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 4px;
-}
-
-.book-list-items {
-    // display: flex;
-    // flex-direction: column;
-    overflow: auto;
-    gap: 2px;
-    padding: 2px;
-    background-color: magenta;
-    border: 1px solid black;
-
-    height: 400px;
-    min-width: 400px;
-
-    // .book-item {
-    //     background: rgb(253, 146, 253);
-    //     border: 1px solid #ccc;
-    //     border-radius: 4px;
-
-    //     height: 100px;
-    //     width: 300px;
-
-    //     &:hover {
-    //         background-color: #f0f0f0;
-    //     }
-    // }
 }
 
 .item-details {
@@ -55,9 +34,6 @@
     padding: 2px;
     background-color: lightgreen;
     border: 1px solid black;
-
-    height: 400px;
-    min-width: 200px;
 }
 
 .item-actions {
@@ -69,12 +45,14 @@
 .mat-header-row {
     background-color: #3f51b5;
     color: white;
-}   
-.mat-row{
+}
+
+.mat-row {
     background-color: rgb(220, 220, 255);
 }
+
 // Set colors for selected rows
-.mat-row[isSelected="true"]{
+.mat-row[isSelected="true"] {
     background-color: rgb(255, 255, 220);
 }
 

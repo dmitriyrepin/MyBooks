@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Book, EMPTY_BOOK } from '../models/book';
-import { BookListSelectionService } from '../services/book-list-selection.service';
+import { Book, EMPTY_BOOK, SAMPLE_BOOK } from '../../models/book';
+import { BookListSelectionService } from '../../services/book-list-selection.service';
 import { SelectionChange } from '@angular/cdk/collections';
 
 @Component({
@@ -10,7 +10,7 @@ import { SelectionChange } from '@angular/cdk/collections';
   styleUrl: './book-details.component.scss'
 })
 export class BookDetailsComponent {
-  book: Book = EMPTY_BOOK;
+  book: Book = SAMPLE_BOOK; // EMPTY_BOOK;
   constructor(private bookListSelection: BookListSelectionService) {
     this.bookListSelection.selectedBook.changed.subscribe((c: SelectionChange<Book>) => {
       if(c.source.hasValue()) {

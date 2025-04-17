@@ -1,0 +1,27 @@
+.book-details {
+    h2 {
+        font-size: 14px;
+    }
+
+    th, td {
+        border: 1px solid rgb(42, 54, 118);
+        padding: 8px;
+    }
+
+    th[scope="row"] {
+        color: white;
+        background-color: rgb(63, 81, 181);
+        text-align: right;
+        font-weight: normal;
+        // Fixes width of the column of row headers
+        width: 60px;
+    }
+
+    table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+        background-color: rgb(220, 220, 255);
+        border: 2px solid rgb(42, 54, 118);
+    }
+}
