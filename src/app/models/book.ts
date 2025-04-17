@@ -7,6 +7,14 @@ export interface Book {
     narator: string;
 }
 
+export const EMPTY_BOOK: Book = {
+    coAuthors: [],
+    author: '',
+    title: '',
+    series: '',
+    narator: ''
+};
+
 export const smapleBookData: Book[] = [
     { author: "Brandon Sanderson", coAuthors: [], title: "Legion", series: "Legion", bookNumber: 1, narator: "Oliver Wyman" },
     { author: "Brandon Sanderson", coAuthors: [], title: "The Final Empire", series: "Mistborn", bookNumber: 1, narator: "Michael Kramer" },

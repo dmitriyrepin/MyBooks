@@ -5,6 +5,8 @@ import { Book, smapleBookData } from '../models/book';
 import { BookDetailsComponent } from '../book-details/book-details.component';
 import { MatTableModule } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
+import { BookListSelectionService } from '../services/book-list-selection.service';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-overview',
@@ -13,23 +15,18 @@ import { SelectionModel } from '@angular/cdk/collections';
   styleUrl: './overview.component.scss',
 })
 export class OverviewComponent {
+  constructor(private bookListSelection: BookListSelectionService) {
+  }
 
   displayedColumns: string[] = ['author', 'title', 'series', 'bookNumber', 'narator'];
 
   books: Book[] = smapleBookData;
 
-  // const initialSelection = [];
-  // const allowMultiSelect = true;
-  selection = new SelectionModel<Book>(false /*allowMultiSelect*/, [] /*initialSelection*/);
-
   onRowClick(book: Book) {
-    this.selection.toggle(book);
+    this.bookListSelection.selectedBook.toggle(book);
   }
-
   isBookSelected(book: Book) {
-    return this.selection.isSelected(book);
+    return this.bookListSelection.selectedBook.isSelected(book);
   }
-
-  
 }
 
