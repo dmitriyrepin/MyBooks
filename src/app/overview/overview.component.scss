@@ -1,0 +1,100 @@
+.overview {
+    display: flex;
+    flex-direction: row;
+
+    height: 400px;
+    min-width: 800px;
+}
+
+.book-list-column {
+    background: lightblue;
+}
+
+.details-column {
+    // background: pink;
+    min-width: 200px;
+}
+
+.book-list-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 4px;
+}
+
+.book-list-items {
+    // display: flex;
+    // flex-direction: column;
+    overflow: auto;
+    gap: 2px;
+    padding: 2px;
+    background-color: magenta;
+    border: 1px solid black;
+
+    height: 400px;
+    min-width: 400px;
+
+    // .book-item {
+    //     background: rgb(253, 146, 253);
+    //     border: 1px solid #ccc;
+    //     border-radius: 4px;
+
+    //     height: 100px;
+    //     width: 300px;
+
+    //     &:hover {
+    //         background-color: #f0f0f0;
+    //     }
+    // }
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 2px;
+    background-color: lightgreen;
+    border: 1px solid black;
+
+    height: 400px;
+    min-width: 200px;
+}
+
+.item-actions {
+    display: flex;
+    flex-direction: row;
+}
+
+// Set colors for a header row
+.mat-header-row {
+    background-color: #3f51b5;
+    color: white;
+}   
+.mat-row{
+    background-color: rgb(220, 220, 255);
+}
+// Set colors for selected rows
+.mat-row[isSelected="true"]{
+    background-color: rgb(255, 255, 220);
+}
+
+// // Set colors for alternate rows
+// .mat-row:nth-child(even) {
+//     background-color: rgb(255, 240, 240);
+// }
+// .mat-row:nth-child(even):hover {
+//     background-color: rgb(255, 220, 220);
+// }
+// .mat-row:nth-child(odd) {
+//     background-color: rgb(240, 240, 255);
+// }
+// .mat-row:nth-child(odd):hover {
+//     background-color: rgb(220, 220, 255);
+// }
+// // Set colors for selected rows
+// .mat-row[isSelected="true"]{
+//     background-color: yellow;
+// }
+// .mat-row[isSelected="true"]:hover {
+//     background-color: yellow;
+// }
