@@ -1,20 +1,31 @@
 .overview {
     display: grid;
-    grid: 400px / auto 400px;
+    grid-template-columns: auto 400px;
+    grid-template-rows: auto;
+    background-color: pink;
 }
 
 .book-list {
-    background: lightblue;
+    background: rgb(173, 216, 230);
+    display: flex;
+    flex-direction: column;
 
     .book-list-options {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
+        background: rgb(208, 220, 160);
+        // justify-content: space-evenly;
         padding: 2px;
+        .filter {
+            padding: 6px;
+            display: flex;
+            flex-direction: row;
+            .filter-what {
+                width: 120px;
+            }
+            background: rgb(144, 193, 191);
+        }
     }
 
     .book-list-items {
-        height: 100%;
         overflow: auto;
 
         background-color: magenta;
@@ -45,6 +56,9 @@
 .mat-header-row {
     background-color: #3f51b5;
     color: white;
+    // The title is not scrolled
+    position: sticky;
+    top: 0px;
 }
 
 .mat-row {
